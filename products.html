@@ -1,1 +1,133 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AK Collection | Products</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #111;
+}
+
+header {
+    background: #000;
+    color: #d4af37;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.product-card h2 {
+    font-size: 20px;
+}
+
+.price {
+    color: #b8860b;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.order-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.back-btn {
+    display:inline-block;
+    margin:20px;
+    color:#000;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>AK Collection</h1>
+<p>Quality | Style | Trust</p>
+</header>
+
+
+<div class="container">
+
+<h2>Our Products</h2>
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+<div class="product-card">
+
+<img src="products/product1.jpg" alt="Product">
+
+<h2>Add Product Name</h2>
+
+<p class="price">
+Rs. 0000
+</p>
+
+<a class="order-btn"
+href="https://wa.me/YOURNUMBER?text=I%20want%20to%20order%20this%20product">
+Order on WhatsApp
+</a>
+
+</div>
+
+
+
+<!-- Add more products below this line -->
+
+
+</div>
+
+</div>
+
+
+<a class="back-btn" href="index.html">
+← Back to Home
+</a>
+
+
+</body>
+</html>
