@@ -1,0 +1,19 @@
+# AK Collection - Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (optional - in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://yourusername.github.io/sitemap.xml

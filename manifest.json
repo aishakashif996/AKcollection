@@ -1,0 +1,61 @@
+{
+  "name": "AK Collection - Premium Handbags",
+  "short_name": "AK Collection",
+  "description": "Premium quality handbags with secure payment and fast dispatch. Quality | Style | Trust",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#D4AF37",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "assets/IMG_20260501_005427_314.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/IMG_20260501_005427_314.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["shopping", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "assets/IMG_20260501_005427_314.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop Now",
+      "short_name": "Shop",
+      "description": "Browse our premium collection",
+      "url": "index.html#products",
+      "icons": [
+        {
+          "src": "assets/IMG_20260501_005427_314.webp",
+          "sizes": "any",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Join WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Join our WhatsApp channel for updates",
+      "url": "index.html#qr",
+      "icons": [
+        {
+          "src": "assets/IMG_20260501_005427_314.webp",
+          "sizes": "any",
+          "type": "image/webp"
+        }
+      ]
+    }
+  ]
+}
