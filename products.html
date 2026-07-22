@@ -1,81 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AK Collection | Products</title>
+<title>AK Collection Products</title>
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #111;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#fff;
+    color:#111;
 }
 
 header {
-    background: #000;
-    color: #d4af37;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
+    background:#000;
+    color:#d4af37;
+    text-align:center;
+    padding:20px;
 }
 
 .container {
-    padding: 20px;
+    padding:20px;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
+.products {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-.product-card {
-    border-radius: 15px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    text-align: center;
-    padding-bottom: 20px;
+.card {
+    background:white;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:20px;
 }
 
-.product-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
+.card img {
+    width:100%;
+    height:350px;
+    object-fit:contain;
 }
 
-.product-card h2 {
-    font-size: 20px;
-}
-
-.price {
-    color: #b8860b;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.order-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-}
-
-.back-btn {
+.order {
     display:inline-block;
-    margin:20px;
-    color:#000;
+    background:#25D366;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
 }
 </style>
 
@@ -93,41 +71,62 @@ header h1 {
 
 <h2>Our Products</h2>
 
-<div class="product-grid">
+<div class="products" id="products">
+Loading products...
+</div>
+
+</div>
 
 
-<!-- PRODUCT 1 -->
-<div class="product-card">
+<script>
 
-<img src="products/product1.jpg" alt="Product">
+const username = "aishakashif996";
+const repo = "AKcollection";
+const folder = "products";
 
-<h2>Add Product Name</h2>
+const whatsapp = "YOUR_WHATSAPP_NUMBER";
 
-<p class="price">
-Rs. 0000
-</p>
 
-<a class="order-btn"
-href="https://wa.me/YOURNUMBER?text=I%20want%20to%20order%20this%20product">
+fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`)
+.then(response => response.json())
+.then(files => {
+
+let container = document.getElementById("products");
+
+container.innerHTML="";
+
+files.forEach(file => {
+
+if(file.type === "file" && 
+(file.name.endsWith(".jpg") ||
+file.name.endsWith(".png") ||
+file.name.endsWith(".webp"))) {
+
+
+container.innerHTML += `
+
+<div class="card">
+
+<img src="${file.download_url}" alt="AK Collection Product">
+
+<br><br>
+
+<a class="order"
+href="https://wa.me/${whatsapp}?text=I%20want%20to%20order%20this%20product">
 Order on WhatsApp
 </a>
 
 </div>
 
+`;
 
+}
 
-<!-- Add more products below this line -->
+});
 
+});
 
-</div>
-
-</div>
-
-
-<a class="back-btn" href="index.html">
-← Back to Home
-</a>
-
+</script>
 
 </body>
 </html>
