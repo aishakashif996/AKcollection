@@ -1,7 +1,7 @@
 {
-  "name": "AK Collection - Premium Handbags",
-  "short_name": "AK Collection",
-  "description": "Premium quality handbags with secure payment and fast dispatch. Quality | Style | Trust",
+  "name": "AK Collection - Quality Products",
+  "short_name": "AKCollection",
+  "description": "Premium quality items with secure payment and fast dispatch. Quality | Affordable | Trust",
   "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
